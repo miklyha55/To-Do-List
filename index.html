@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>To Do List from Roman Kolenko</title>
+	<link href="css/reset.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+	<script src="js/main.js"></script>
+</head>
+<body onload="controller.onload()">
+
+	<h1>To Do List from Roman Kolenko</h1>
+	<div class="wrapper">
+		<section class="tasks">
+			<h2>Add Task:<button class="addTaskButton" onclick="controller.modalAddTask()">+</button></h2>
+			<ul class="tasksList"></ul>
+		</section>
+		
+		<section class="statuses">
+			<h2>Statuses:</h2>
+			<ul class="statusesList"></ul>
+			<button class="statusesClear" onclick="controller.clearHistory()">Clear Hisory</button>
+		</section>
+	</div>
+
+	<section class="modalAddTask">
+		<h2>Add Task to List</h2>
+		<input type="text">
+		<button class="modalAddTask_button" onclick="controller.addTask(event)">Add</button>
+		<button class="modalAddTask_button" onclick="controller.closeModal(event)">Close</button>
+	</section>
+
+	<section class="modalEditTask">
+		<h2>Edit Task to List</h2>
+		<input type="text">
+		<button class="modalAddTask_button" onclick="controller.editTask(event)">Edit</button>
+		<button class="modalAddTask_button" onclick="controller.closeModal(event)">Close</button>
+	</section>
+</body>
+</html>

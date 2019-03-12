@@ -1,0 +1,88 @@
+body, html {
+	height: calc(100vh - 58px);
+}
+
+body {
+	position: relative;
+}
+
+h1 {
+	padding: 10px;
+	text-align: center;
+}
+.tasksList {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tasksList > li > div {
+	padding: 10px; 
+}
+
+.tasksList > li > div:first-child {
+	text-align: right;
+}
+
+.tasksList > li.mark {
+	border: 1px solid green;
+}
+
+.tasksList > li  {
+	width: 200px;
+	margin: 10px;
+	border: 1px solid lightgray;
+}
+
+.statusesClear {
+	margin-top: 20px;
+}
+
+.wrapper > section {
+	width: 50%;
+	border: 1px solid lightgray;
+	padding: 10px;
+}
+
+.addTaskButton {
+	margin-left: 10px;
+}
+
+.wrapper {
+	display: flex;
+	height: inherit;
+}
+.tasks > h2 {
+	display: flex;
+	padding-left: 10px;
+}
+
+.tasks > h2, .statuses > h2 {
+	margin-bottom: 10px;
+}
+
+.modalAddTask input, .modalEditTask input{
+	margin-top: 10px;
+}
+.modalAddTask, .modalEditTask {
+	display: none;
+	padding: 30px 10px; 
+	text-align: center;
+	background: lightgray;
+	width: 300px;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 100;
+}
+
+ul > li {
+	list-style: none;
+}
+
+.statusesList > li > span {
+	padding-right: 10px;
+}
