@@ -10,6 +10,7 @@ h1 {
 	padding: 10px;
 	text-align: center;
 }
+
 .tasksList {
 	display: flex;
 	flex-wrap: wrap;
@@ -63,6 +64,7 @@ h1 {
 .modalAddTask input, .modalEditTask input{
 	margin-top: 10px;
 }
+
 .modalAddTask, .modalEditTask {
 	display: none;
 	padding: 30px 10px; 

@@ -168,7 +168,6 @@ var controller = {
 
 var view = {
 	update:function(tasks, statuses) {
-
 		var tasksList = document.querySelector('.tasksList');
 		var statusesList = document.querySelector('.statusesList');
 		tasksList.innerHTML = '';
