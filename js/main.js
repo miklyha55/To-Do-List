@@ -91,8 +91,8 @@ var controller = {
 
 	modalEditTask: function(event) {
 		var modalEditTask = document.querySelector('.modalEditTask');
-		var id = event.target.parentElement.parentElement.getAttribute('id');
-		var name = event.target.parentElement.parentElement.querySelector('p').innerHTML;
+		var id = event.target.closest('li').getAttribute('id');
+		var name = event.target.closest('li').querySelector('p').innerHTML;
 
 		modalEditTask.querySelector('input').value = name;
 		modalEditTask.setAttribute('data_id', id);
@@ -138,8 +138,8 @@ var controller = {
 	},
 
 	removeTask: function(event) {
-		var id = event.target.parentElement.parentElement.getAttribute('id');
-		var name = event.target.parentElement.parentElement.querySelector('p').innerHTML;
+		var id = event.target.closest('li').getAttribute('id');
+		var name = event.target.closest('li').querySelector('p').innerHTML;
 
 		var confim = confirm('Are you sure delete - '+ name +'?');
 
@@ -155,8 +155,8 @@ var controller = {
 	},
 
 	toggleMark: function(event) {
-		var id = event.target.parentElement.parentElement.getAttribute('id');
-		var name = event.target.parentElement.parentElement.querySelector('p').innerHTML;
+		var id = event.target.closest('li').getAttribute('id');
+		var name = event.target.closest('li').querySelector('p').innerHTML;
 
 		var tasks = model.toggleMark(id);
 		tasks = model.sortTasksName(tasks);
