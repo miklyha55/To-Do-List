@@ -107,7 +107,7 @@ var controller = {
 
 		if(name != '') {
 			var tasks = model.addTask(name);
-			tasks = model.sortTasksName(tasks);
+			tasks = model.sortTasksName();
 			var statuses = model.addStatus(name, 'added');
 			view.update(tasks, statuses);
 		} else {
@@ -125,7 +125,7 @@ var controller = {
 
 		if(name != '') {
 			var tasks = model.editTask(id, name);
-			tasks = model.sortTasksName(tasks);
+			tasks = model.sortTasksName();
 			var statuses = model.addStatus(name, 'edited');
 			view.update(tasks, statuses);
 		} else {
@@ -146,7 +146,7 @@ var controller = {
 		if(confim) {
 
 			var tasks = model.removeTask(id);
-			tasks = model.sortTasksName(tasks);
+			tasks = model.sortTasksName();
 			var statuses = model.addStatus(name, 'removed');
 			view.update(tasks, statuses); 
 		} else {
@@ -159,7 +159,7 @@ var controller = {
 		var name = event.target.closest('li').querySelector('p').innerHTML;
 
 		var tasks = model.toggleMark(id);
-		tasks = model.sortTasksName(tasks);
+		tasks = model.sortTasksName();
 		var statuses = model.addStatus(name, 'marked');
 		view.update(tasks, statuses);
 	}
